@@ -714,8 +714,8 @@ impl Discord {
 	/// ```
 	pub fn create_permission(&self, channel: ChannelId, target: PermissionOverwrite) -> Result<()> {
 		let (id, kind) = match target.kind {
-			PermissionOverwriteType::Member(id) => (id.0, "member"),
-			PermissionOverwriteType::Role(id) => (id.0, "role"),
+			PermissionOverwriteType::Member(id) => (id.0, 1),
+			PermissionOverwriteType::Role(id) => (id.0, 0),
 		};
 		let map = json! {{
 			"id": id,
