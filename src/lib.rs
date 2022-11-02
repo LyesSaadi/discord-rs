@@ -719,7 +719,7 @@ impl Discord {
 		};
 		let map = json! {{
 			"id": id,
-			"kind": kind,
+			"type": kind,
 			"allow": target.allow.bits(),
 			"deny": target.deny.bits(),
 		}};
